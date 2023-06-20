@@ -1,0 +1,457 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/trees/protos/BigSassafras.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/trees/protos/Cypress.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/DryMud.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/trees/protos/Oak.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/PaintedWood.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/trees/protos/Pine.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/Rubber.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/trees/protos/SimpleTree.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/UnevenTerrain.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.9884863767350843 -0.07698824033092118 0.13025933310090723 3.1618853088178835
+  position -18.008070745084833 -3.0070454373261164 11.602362677369072
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Robot {
+  translation 3.1189596784725206 -3.1416947532391006 4.03420875821453
+  rotation 0.08698950560451217 0.011412044813111791 -0.9961438606686618 1.4783341790372502
+  children [
+    DEF base Shape {
+      appearance PaintedWood {
+        colorOverride 0 0.2 0.1
+      }
+      geometry DEF Base Box {
+        size 1.2 3 1
+      }
+    }
+    DEF wheel1 HingeJoint {
+      jointParameters HingeJointParameters {
+        position -20.727783210895083
+        anchor 0.75 -0.96 -0.53
+      }
+      device [
+        RotationalMotor {
+          name "wheel1"
+          maxTorque 40
+        }
+      ]
+      endPoint Solid {
+        translation 0.75 -0.96 -0.53
+        rotation 0.6280237077379432 -0.459526694110524 0.628029808145234 4.003082928748296
+        children [
+          DEF wheel Shape {
+            appearance Rubber {
+            }
+            geometry Cylinder {
+              height 0.5
+              radius 0.5
+            }
+          }
+        ]
+        boundingObject USE wheel
+        physics DEF phy1 Physics {
+          mass 1
+        }
+        linearVelocity 8.508466513946547e-06 -7.641040569683618e-06 -3.70160801753628e-06
+        angularVelocity 2.220563063190869e-06 -2.889862312723743e-06 -3.492096619500823e-06
+      }
+    }
+    DEF wheel2 HingeJoint {
+      jointParameters HingeJointParameters {
+        position -45.16473043581123
+        anchor -0.75 -0.96 -0.53
+      }
+      device [
+        RotationalMotor {
+          name "wheel2"
+          maxTorque 40
+        }
+      ]
+      endPoint Solid {
+        translation -0.75 -0.96 -0.53
+        rotation 0.4868505092085469 -0.7252228613135708 0.48685560807238915 4.3964932680003725
+        children [
+          DEF wheel Shape {
+            appearance Rubber {
+            }
+            geometry Cylinder {
+              height 0.5
+              radius 0.5
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE wheel
+        physics USE phy1
+        linearVelocity 1.6585295539746523e-05 -9.130924931564975e-06 -5.102819012563404e-07
+        angularVelocity -4.30235783980632e-06 5.1376401372257524e-05 1.7146390978988793e-06
+      }
+    }
+    DEF wheel3 HingeJoint {
+      jointParameters HingeJointParameters {
+        position -30.519073078430996
+        anchor 0.75 0.96 -0.53
+      }
+      device [
+        RotationalMotor {
+          name "wheel3"
+          maxTorque 40
+        }
+      ]
+      endPoint Solid {
+        translation 0.75 0.96 -0.53
+        rotation -0.39777146463703694 -0.8267729683162289 -0.39777420829168736 4.523291505368014
+        children [
+          DEF wheel Shape {
+            appearance Rubber {
+            }
+            geometry Cylinder {
+              height 0.5
+              radius 0.5
+            }
+          }
+        ]
+        name "solid(2)"
+        boundingObject USE wheel
+        physics USE phy1
+        linearVelocity 5.6893920755811614e-06 -1.264422249390568e-05 -1.7058398293557354e-07
+        angularVelocity 3.5164564101539463e-07 2.5751206914292698e-05 -4.7182888903181387e-07
+      }
+    }
+    DEF wheel4 HingeJoint {
+      jointParameters HingeJointParameters {
+        position -49.8588653754591
+        anchor -0.75 0.96 -0.53
+      }
+      device [
+        RotationalMotor {
+          name "wheel4"
+          maxTorque 40
+        }
+      ]
+      endPoint Solid {
+        translation -0.75 0.96 -0.53
+        rotation 0.1979163516731129 0.960030162413025 0.1979171670109134 1.6115847749539505
+        children [
+          DEF wheel Shape {
+            appearance Rubber {
+            }
+            geometry Cylinder {
+              height 0.5
+              radius 0.5
+            }
+          }
+        ]
+        name "solid(3)"
+        boundingObject USE wheel
+        physics USE phy1
+        linearVelocity 1.3678072296103403e-05 -1.4145276287493402e-05 2.472889938815101e-06
+        angularVelocity 2.0798915829286746e-06 -1.564855513455146e-06 -3.3722451082058826e-06
+      }
+    }
+  ]
+  boundingObject USE base
+  physics USE phy1
+  controller ""
+  linearVelocity 1.0114303000386749e-05 -1.186487656967117e-05 -6.706958420750185e-07
+  angularVelocity 2.0800247188925704e-06 -1.5650484707715586e-06 -3.372446069825493e-06
+}
+DEF forest Solid {
+  children [
+    Pine {
+      translation -15.62 20.85 1.15
+      name "pine tree(6)"
+    }
+    Pine {
+      translation -15.62 -10.45 1.15
+      name "pine tree(5)"
+    }
+    Pine {
+      translation 11.67 -10.45 1.45
+      name "pine tree(3)"
+    }
+    Pine {
+      translation 20.49 -10.45 2.81
+      name "pine tree(4)"
+    }
+    Pine {
+      translation 11.67 15.84 1.88
+      name "pine tree(2)"
+    }
+    Pine {
+      translation -4.35 9.25 2.22
+      name "pine tree(1)"
+    }
+    Pine {
+      translation -4.35 -3.53 2.18
+    }
+    SimpleTree {
+      translation 0 0 3
+    }
+    SimpleTree {
+      translation 6 0 3
+      name "tree(1)"
+    }
+    SimpleTree {
+      translation 6 10 3
+      name "tree(2)"
+    }
+    SimpleTree {
+      translation 16 15 3
+      name "tree(3)"
+    }
+    SimpleTree {
+      translation -16 -15 1.8
+      name "tree(4)"
+    }
+    SimpleTree {
+      translation 16 -15 3
+      name "tree(5)"
+    }
+    SimpleTree {
+      translation 5 -22 2
+      name "tree(6)"
+    }
+    SimpleTree {
+      translation -15 -22 2
+      name "tree(7)"
+    }
+    SimpleTree {
+      translation -9 22 2
+      name "tree(8)"
+    }
+    SimpleTree {
+      translation -18 16 2.5
+      name "tree(9)"
+    }
+    SimpleTree {
+      translation -22 -3 2
+      name "tree(10)"
+    }
+    SimpleTree {
+      translation 10 -8 3
+      name "tree(11)"
+    }
+    SimpleTree {
+      translation -5 -8 2.3
+      name "tree(12)"
+    }
+    SimpleTree {
+      translation 1 -17 2
+      name "tree(13)"
+    }
+    Oak {
+      translation 14.94 0 3.24
+    }
+    Oak {
+      translation 20 -5.97 3.28
+      name "oak tree(1)"
+    }
+    Oak {
+      translation 15.97 -10.75 3.02
+      name "oak tree(2)"
+    }
+    Oak {
+      translation 15.97 11.04 3.07
+      name "oak tree(3)"
+    }
+    Oak {
+      translation -24.52 6.27 2.46
+      name "oak tree(4)"
+    }
+    Oak {
+      translation -12.06 2.39 2.09
+      name "oak tree(6)"
+    }
+    Oak {
+      translation -13.84 10.96 2.09
+      name "oak tree(7)"
+    }
+    Oak {
+      translation -2.97 18.97 1.79
+      name "oak tree(8)"
+    }
+    Oak {
+      translation 0.35 13.07 2.24
+      name "oak tree(9)"
+    }
+    Oak {
+      translation -9.22 15.64 2.72
+      name "oak tree(5)"
+    }
+    Oak {
+      translation 7.46 20.45 2.43
+      name "oak tree(10)"
+    }
+    Oak {
+      translation 16.74 21.4 2.43
+      name "oak tree(11)"
+    }
+    BigSassafras {
+      translation -11.82 -13.71 1.72
+    }
+    BigSassafras {
+      translation -21.32 -8.95 1.72
+      name "sassafras tree(1)"
+    }
+    BigSassafras {
+      translation 19.67 7.95 3.44
+      name "sassafras tree(2)"
+    }
+    BigSassafras {
+      translation 19.67 -1.13 2.97
+      name "sassafras tree(3)"
+    }
+    BigSassafras {
+      translation 21.66 -19.93 2.97
+      name "sassafras tree(4)"
+    }
+    BigSassafras {
+      translation 9.84 -19.93 2.64
+      name "sassafras tree(5)"
+    }
+    BigSassafras {
+      translation -6.69 -19.93 1.29
+      name "sassafras tree(6)"
+    }
+    BigSassafras {
+      translation -16.82 -5.16 2.98
+      name "sassafras tree(7)"
+    }
+    BigSassafras {
+      translation -16.82 8.12 2.98
+      name "sassafras tree(8)"
+    }
+    BigSassafras {
+      translation -21.82 21.14 2.98
+      name "sassafras tree(9)"
+    }
+    BigSassafras {
+      translation 1.95 21.14 2.63
+      name "sassafras tree(10)"
+    }
+    Cypress {
+      translation -11.36 0 1.96
+    }
+    Cypress {
+      translation -14.16 5.78 2.06
+      name "cypress tree(1)"
+    }
+    Cypress {
+      translation 20.42 15.8 3.01
+      name "cypress tree(2)"
+    }
+    Cypress {
+      translation 21.87 20.79 3.01
+      name "cypress tree(3)"
+    }
+    Cypress {
+      translation 11.51 1.81 3.01
+      name "cypress tree(4)"
+    }
+    Cypress {
+      translation 2.77 -10.75 2.51
+      name "cypress tree(5)"
+    }
+    Cypress {
+      translation -2.24 -21.57 1.87
+      name "cypress tree(6)"
+    }
+    Cypress {
+      translation 15.22 -21.57 2.5
+      name "cypress tree(7)"
+    }
+    Cypress {
+      translation 6.61 -15.53 2.8
+      name "cypress tree(8)"
+    }
+    Cypress {
+      translation -11.26 5.51 2.26
+      name "cypress tree(9)"
+    }
+  ]
+}
+UnevenTerrain {
+}
+DEF Border Solid {
+  translation 0 0 3.9
+  children [
+    Solid {
+      translation 0 -25.2 -0.37003136092665656
+      children [
+        DEF border Shape {
+          appearance DryMud {
+          }
+          geometry Box {
+            size 49 1 3
+          }
+        }
+      ]
+      name "border1"
+      boundingObject USE border
+      physics DEF phy1 Physics {
+        mass 1
+      }
+      linearVelocity 0 0 -1.2139209860606136e-07
+    }
+    Solid {
+      translation 0 25.53 -0.37003136092665656
+      children [
+        DEF border Shape {
+          appearance DryMud {
+          }
+          geometry Box {
+            size 49 1 3
+          }
+        }
+      ]
+      name "border2"
+      boundingObject USE border
+      physics USE phy1
+      linearVelocity 0 0 -1.2139209860606136e-07
+    }
+    Solid {
+      translation 25.53 0 -0.37
+      rotation 0 0 1 1.5708
+      children [
+        DEF border Shape {
+          appearance DryMud {
+          }
+          geometry Box {
+            size 49 1 3
+          }
+        }
+      ]
+      name "border3"
+      boundingObject USE border
+    }
+    Solid {
+      translation -25.5301 1.57462e-05 -0.37003136092665656
+      rotation 5.1580022398749126e-05 -9.550089548459884e-05 0.9999999941095401 1.569814080916819
+      children [
+        DEF border Shape {
+          appearance DryMud {
+          }
+          geometry Box {
+            size 49 1 3
+          }
+        }
+      ]
+      name "border4"
+      boundingObject USE border
+      physics USE phy1
+      linearVelocity 0 0 -1.2139209860606136e-07
+    }
+  ]
+  name "solid(1)"
+}
